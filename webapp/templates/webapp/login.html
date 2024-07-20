@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    <h2>Login</h2>
+{%  endblock page_title%}
+
+{% block page_content %}
+<form action="" method='POST' autocomplete='off'>
+
+    {% csrf_token %}
+
+    {{loginform.as_p}}
+
+    <input type="submit" value='Login'>
+</form>
+{%  endblock page_content%}
